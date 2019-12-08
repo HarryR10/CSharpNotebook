@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "cxLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/cxLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/cxLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cxLib/1.0.0": {
+      "type": "project",
+      "path": "../cxLib/cxLib.csproj",
+      "msbuildProject": "../cxLib/cxLib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "cxLib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/igor/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/testProgram/testProgram.csproj",
+      "projectName": "complex",
+      "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/testProgram/testProgram.csproj",
+      "packagesPath": "/Users/igor/.nuget/packages/",
+      "outputPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/testProgram/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/igor/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/cxLib.csproj": {
+              "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/cxLib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

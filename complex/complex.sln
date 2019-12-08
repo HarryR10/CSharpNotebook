@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testProgram", "testProgram\testProgram.csproj", "{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cxLib", "cxLib\cxLib.csproj", "{07041983-0653-4F99-B7F7-B62498347E83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07041983-0653-4F99-B7F7-B62498347E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07041983-0653-4F99-B7F7-B62498347E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07041983-0653-4F99-B7F7-B62498347E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07041983-0653-4F99-B7F7-B62498347E83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

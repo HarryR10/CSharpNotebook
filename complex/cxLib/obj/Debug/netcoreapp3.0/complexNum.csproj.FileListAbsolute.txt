@@ -1,0 +1,8 @@
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/bin/Debug/netcoreapp3.0/complexNum.deps.json
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/bin/Debug/netcoreapp3.0/complexNum.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/bin/Debug/netcoreapp3.0/complexNum.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/obj/Debug/netcoreapp3.0/complexNum.csprojAssemblyReference.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/obj/Debug/netcoreapp3.0/complexNum.AssemblyInfoInputs.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/obj/Debug/netcoreapp3.0/complexNum.AssemblyInfo.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/obj/Debug/netcoreapp3.0/complexNum.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/complexNum/obj/Debug/netcoreapp3.0/complexNum.pdb

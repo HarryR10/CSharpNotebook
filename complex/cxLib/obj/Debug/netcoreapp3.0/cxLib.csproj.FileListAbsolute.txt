@@ -1,0 +1,10 @@
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/obj/Debug/netcoreapp3.0/cxLib.csprojAssemblyReference.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/obj/Debug/netcoreapp3.0/cxLib.AssemblyInfoInputs.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/obj/Debug/netcoreapp3.0/cxLib.AssemblyInfo.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/bin/Debug/netcoreapp3.0/complex.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/bin/Debug/netcoreapp3.0/Vector2D.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/bin/Debug/netcoreapp3.0/cxLib.deps.json
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/bin/Debug/netcoreapp3.0/cxLib.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/bin/Debug/netcoreapp3.0/cxLib.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/obj/Debug/netcoreapp3.0/cxLib.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/cxLib/obj/Debug/netcoreapp3.0/cxLib.pdb

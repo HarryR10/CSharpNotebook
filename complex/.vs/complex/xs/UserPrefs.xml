@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{31F8E82F-C62B-4A39-A4FE-0B0FD9313B70}|Default">
+  <MonoDevelop.Ide.ItemProperties.testProgram PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="cxLib/Vector2D.cs">
+    <Files>
+      <File FileName="cxLib/complex.cs" Line="4" Column="28" />
+      <File FileName="cxLib/Vector2D.cs" Line="2" Column="17" />
+      <File FileName="testProgram/Program.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="complex" expanded="True">
+            <Node name="cxLib" expanded="True">
+              <Node name="Vector2D.cs" selected="True" />
+            </Node>
+            <Node name="testProgram" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>complexNum/cxLib.csproj</String>
+    <String>complex/testProgram.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Seagate/CSharp/gitlab/Lab-4/complex/testProgram/Program.cs" relfile="testProgram/Program.cs" line="14" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
