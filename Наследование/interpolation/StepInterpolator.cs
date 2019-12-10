@@ -17,7 +17,7 @@ internal class StepInterpolator : CommonInterpolator
     {
     }
 
-    public override double CalculateValue(double x)            // а вот и апкаст для метода CalculateValue
+    public override double CalculateValue(double x)            // ... CalculateValue
     {
         if (Values.Length > 0)
         {
