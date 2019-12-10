@@ -9,3 +9,14 @@
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/obj/Debug/netcoreapp3.0/interpolation.AssemblyInfo.cs
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/obj/Debug/netcoreapp3.0/interpolation.dll
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/obj/Debug/netcoreapp3.0/interpolation.pdb
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation.deps.json
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation.runtimeconfig.json
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation.runtimeconfig.dev.json
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation.dll
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/bin/Debug/netcoreapp3.0/interpolation.pdb
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/obj/Debug/netcoreapp3.0/interpolation.csprojAssemblyReference.cache
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/obj/Debug/netcoreapp3.0/interpolation.AssemblyInfoInputs.cache
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/obj/Debug/netcoreapp3.0/interpolation.AssemblyInfo.cs
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/obj/Debug/netcoreapp3.0/interpolation.dll
+/Volumes/Seagate/CSharp/CSharpNotebook/Наследование/interpolation/obj/Debug/netcoreapp3.0/interpolation.pdb
