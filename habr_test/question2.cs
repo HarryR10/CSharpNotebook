@@ -14,6 +14,11 @@
             var a = new A(5);
             DoStuff(a);
             Console.WriteLine(a.value);
+            
+            // var a = new A(5);
+            // a = DoStuff(a);
+            // Console.WriteLine(a.value);
+            // =15
         }
 
         static A DoStuff(A a)
@@ -23,3 +28,7 @@
             return a;
         }
     }
+// Вопрос - что выведет программа
+
+// результатом будет 10, т.к. DoStuff(A a) хоть и возвращает значение, но оно не присвоено в коде Main
+// одновременно с этим идет присвоение свойства value для уже объявленного экземпляра
