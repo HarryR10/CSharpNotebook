@@ -38,20 +38,7 @@ public class Program
                     (interpolator as CommonInterpolator).CalculateValue(SamplePoint));
             }
         }
-        // a - (a / b) * b
-        Console.WriteLine(1 - (1 / 3) * 3);
-        Console.WriteLine(2 - (2 / 3) * 3);
-        Console.WriteLine(3 - (3 / 3) * 3);
-        Console.WriteLine(4 - (4 / 3) * 3);
-        Console.WriteLine(5 - (5 / 3) * 3);
-        Console.WriteLine(0 % 2);
-        Console.WriteLine(1 % 2);
-        Console.WriteLine(2 % 2);
-        double[] line = new double[3];
-        line[0] = 1;
-
-        var peremen = new Matrix(3, new double[] { 1, 2, 3, 4, 5, 6, 7 });
-        Console.WriteLine(peremen.ToString());
+        Console.WriteLine(Matrix.QuadraticMx());
     }
 }
 
