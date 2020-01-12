@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "MatrixMath/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/MatrixMath.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MatrixMath.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MatrixMath/1.0.0": {
+      "type": "project",
+      "path": "../MatrixMath/MatrixMath/MatrixMath.csproj",
+      "msbuildProject": "../MatrixMath/MatrixMath/MatrixMath.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "MatrixMath >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/igor/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/interpolation.csproj",
+      "projectName": "interpolation",
+      "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/interpolation.csproj",
+      "packagesPath": "/Users/igor/.nuget/packages/",
+      "outputPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/igor/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/MatrixMath.csproj": {
+              "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/MatrixMath.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

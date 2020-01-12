@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpolation", "interpolation.csproj", "{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixMath", "..\MatrixMath\MatrixMath\MatrixMath.csproj", "{CFF05EF7-A995-469A-A39A-CA032119FEAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF05EF7-A995-469A-A39A-CA032119FEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF05EF7-A995-469A-A39A-CA032119FEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF05EF7-A995-469A-A39A-CA032119FEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF05EF7-A995-469A-A39A-CA032119FEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

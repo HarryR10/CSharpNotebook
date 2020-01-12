@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MatrixMath/MatrixMath/MainClass.cs">
+    <Files>
+      <File FileName="Program.cs" Line="53" Column="1" />
+      <File FileName="CommonInterpolator.cs" Line="1" Column="1" />
+      <File FileName="LinearInterpolator.cs" Line="1" Column="1" />
+      <File FileName="../MatrixMath/MatrixMath/MainClass.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="interpolation" expanded="True">
+            <Node name="interpolation" expanded="True" />
+            <Node name="MatrixMath" expanded="True">
+              <Node name="MainClass.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.interpolation PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
