@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MatrixMath;
 
 public class Program
@@ -38,7 +38,12 @@ public class Program
                     (interpolator as CommonInterpolator).CalculateValue(SamplePoint));
             }
         }
-        Console.WriteLine(Matrix.QuadraticMx());
+        var x = Matrix.QuadraticMx();
+        Console.WriteLine(x.Columns);
+        var r = new double[] { 1, 2, 3, 4, 5, 6 };
+        var l = new Matrix(2, r);
+        //x = x* l;
+        Console.WriteLine(x * l);
     }
 }
 
