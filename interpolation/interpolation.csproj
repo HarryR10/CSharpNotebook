@@ -7,5 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MatrixMath\MatrixMath\MatrixMath.csproj" />
+    <ProjectReference Include="..\QuadEquation\QuadEquation\Polynoms.csproj" />
   </ItemGroup>
 </Project>

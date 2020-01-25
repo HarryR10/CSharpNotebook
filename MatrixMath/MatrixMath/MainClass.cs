@@ -36,6 +36,7 @@ namespace MatrixMath
             Rows = _matrix.Count;
         }
 
+        // methods
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
@@ -62,6 +63,36 @@ namespace MatrixMath
             return strRes;
         }
 
+        public Matrix Copy()
+        {
+            double[] allNumbers = new double[this.Columns * this.Rows];
+
+            int index = 0;
+            foreach (var row in this.GetRows)
+            {
+                foreach(var num in row)
+                {
+                    allNumbers.SetValue(num, index);
+                    index++;
+                }
+            }
+            return new Matrix(this.Columns, allNumbers);
+        }
+
+        public double[] ToArray()
+        {
+            int counter = 0;
+            double[] result = new double[Rows * Columns];
+            foreach(var row in this.GetRows)
+            {
+                foreach(double el in row)
+                {
+                    result[counter] = el;
+                    counter++;
+                }
+            }
+            return result;
+        }
         // static
         public static Matrix QuadraticMx()
         {
@@ -79,18 +110,44 @@ namespace MatrixMath
                 throw new MultiplyException(String.Format("Обнаружена ошибка: \"{0}\"", errorMsg));
             }
 
-            Matrix result = new Matrix(a.Columns, new double[a.Columns * a.Rows]);
+            Matrix result = new Matrix(b.Columns, new double[b.Columns * a.Rows]);
 
-            int indexdRows = 0;
-            foreach (var row in result.GetRows)
+            double[] mtrxArray = new double[a.Columns * a.Rows];
+
+
+            int rowIterator = 0;
+            foreach (var row in a.GetRows)
             {
-                for(int id = 0; id < row.Length; id++)
+                
+                Matrix subResult = b.Copy();
+                int index = 0;
+
+                //создаем "подматрицу" - результат умножения каждого числа строки первой матрицы
+                //на каждое число каждого столбца второй матрицы
+                foreach(double num in row)
                 {
-                    // error!
-                    row[id] = a.GetRows[indexdRows][id] * b.GetRows[id][indexdRows];
+                    //foreach(double subRow in subResult.GetRows[index])
+                    var currentSubRow = subResult.GetRows[index];
+                    for (int subIndx = 0; subIndx < subResult.Columns; subIndx++)
+                    {
+                        currentSubRow[subIndx] = currentSubRow[subIndx] * num;
+                    }
+                    index++;
                 }
-                indexdRows++;
+
+                //складываем числа по столбцам
+                //сразу в матрицу-результат
+                foreach (var summRow in subResult.GetRows)
+                {
+                    for (int el = 0; el < summRow.Length; el++)
+                    {
+                        result.GetRows[rowIterator][el] += summRow[el];
+                    }
+                }
+
+                rowIterator++;
             }
+
 
             return result;
         }

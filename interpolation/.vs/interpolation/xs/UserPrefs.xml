@@ -1,34 +1,35 @@
 ﻿<Properties StartupConfiguration="{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../MatrixMath/MatrixMath/MainClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="46" Column="28" />
+      <File FileName="Program.cs" Line="59" Column="1" />
       <File FileName="CommonInterpolator.cs" />
       <File FileName="LinearInterpolator.cs" />
-      <File FileName="../MatrixMath/MatrixMath/MainClass.cs" Line="33" Column="34" />
-      <File FileName="../MatrixMath/MatrixMath/EmptyClass.cs" Line="9" Column="38" />
+      <File FileName="StepInterpolator.cs" />
+      <File FileName="ExactQuadraticInterpolator.cs" />
+      <File FileName="../QuadEquation/QuadEquation/MainClass.cs" Line="25" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="interpolation" expanded="True">
-            <Node name="interpolation" expanded="True" />
-            <Node name="MatrixMath" expanded="True">
-              <Node name="MainClass.cs" selected="True" />
+            <Node name="interpolation" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="MatrixMath" expanded="True" />
+            <Node name="Polynoms" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>i % columns</Value>
-          <Value>_matrix</Value>
-          <Value>l</Value>
-          <Value>x</Value>
-          <Value>x*l</Value>
-          <Value>x.Columns</Value>
-          <Value>l.Rows</Value>
-          <Value>x.Rows</Value>
-        </State>
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -37,7 +38,7 @@
   <MonoDevelop.Ide.ItemProperties.interpolation PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/Program.cs" relfile="Program.cs" line="46" column="1" />
+      <Breakpoint file="/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/Program.cs" relfile="Program.cs" line="59" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/MatrixMath.dll": {}
         }
+      },
+      "QuadEquation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/QuadEquation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuadEquation.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../MatrixMath/MatrixMath/MatrixMath.csproj",
       "msbuildProject": "../MatrixMath/MatrixMath/MatrixMath.csproj"
+    },
+    "QuadEquation/1.0.0": {
+      "type": "project",
+      "path": "../QuadEquation/QuadEquation/Polynoms.csproj",
+      "msbuildProject": "../QuadEquation/QuadEquation/Polynoms.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "MatrixMath >= 1.0.0"
+      "MatrixMath >= 1.0.0",
+      "QuadEquation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -52,6 +68,9 @@
           "projectReferences": {
             "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/MatrixMath.csproj": {
               "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/MatrixMath.csproj"
+            },
+            "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/Polynoms.csproj": {
+              "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/Polynoms.csproj"
             }
           }
         }

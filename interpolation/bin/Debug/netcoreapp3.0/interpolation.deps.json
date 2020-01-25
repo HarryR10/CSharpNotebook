@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.0": {
       "interpolation/1.0.0": {
         "dependencies": {
-          "MatrixMath": "1.0.0"
+          "MatrixMath": "1.0.0",
+          "QuadEquation": "1.0.0"
         },
         "runtime": {
           "interpolation.dll": {}
@@ -17,6 +18,11 @@
       "MatrixMath/1.0.0": {
         "runtime": {
           "MatrixMath.dll": {}
+        }
+      },
+      "QuadEquation/1.0.0": {
+        "runtime": {
+          "QuadEquation.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "MatrixMath/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuadEquation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

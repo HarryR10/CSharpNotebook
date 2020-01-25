@@ -19,7 +19,8 @@ public class Program
         object[] interpolators =                // а вот про это нужно прочитать подробнее
         {
             new StepInterpolator(values),
-            new LinearInterpolator(values)
+            new LinearInterpolator(values),
+            new ExactQuadraticInterpolator(values)
         };
 
         Console.WriteLine("Calculating value at sample point: {0}", SamplePoint);
@@ -44,6 +45,17 @@ public class Program
         var l = new Matrix(2, r);
         //x = x* l;
         Console.WriteLine(x * l);
+
+        var oneDo = new double[] { 1, 0, 2, 1, -1, 1 };
+        var one = new Matrix(2, oneDo);
+
+        var tDo = new double[] { 1, 2, 0, 0, -1, 1 };
+        var two = new Matrix(3, tDo);
+
+        Console.WriteLine(one * two);
+
+        var Q = new ExactQuadraticInterpolator(values);
+        Console.WriteLine(two.ToArray());
     }
 }
 
