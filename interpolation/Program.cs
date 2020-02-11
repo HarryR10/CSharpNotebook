@@ -1,9 +1,9 @@
 using System;
-using MatrixMath;
+using System.Globalization;
 
 public class Program
 {
-    private const double SamplePoint = 1.75;    // константа - объект не изменяемый
+    //private const double SamplePoint = 1.75;    // константа - объект не изменяемый
                                                 // "может быть инициализировано только при объявлении поля"
                                                 // readonly - может быть определен и при объявлении поля, и в конструкторе
                                                 // поле readonly можно использовать для констант во время выполнения
@@ -14,16 +14,22 @@ public class Program
 
     static void Main()
     {
-        double[] values = { 0, 2, 1, 4 };
+        Console.WriteLine("Please, add the sample point");
+        string toParse = Console.ReadLine();
+        double samplePoint = double.Parse(toParse, CultureInfo.InvariantCulture);
+
+        //double[] values = { 0, 2, 1, 4 };
+        double[] values = { 0, -2, 1, -5, 2, 0, 3, -4 };
 
         object[] interpolators =                // а вот про это нужно прочитать подробнее
         {
             new StepInterpolator(values),
             new LinearInterpolator(values),
-            new ExactQuadraticInterpolator(values)
+            new ExactQuadraticInterpolator(values),
+            new NewtonInterpolator(values)
         };
 
-        Console.WriteLine("Calculating value at sample point: {0}", SamplePoint);
+        Console.WriteLine("Calculating value at sample point: {0}", samplePoint);
 
         foreach (var interpolator in interpolators)
         {
@@ -36,26 +42,9 @@ public class Program
             {
                 Console.WriteLine("Class {0}: Interpolated value is {1}",
                     interpolator.GetType().Name,
-                    (interpolator as CommonInterpolator).CalculateValue(SamplePoint));
+                    (interpolator as CommonInterpolator).CalculateValue(samplePoint));
             }
         }
-        var x = Matrix.QuadraticMx();
-        Console.WriteLine(x.Columns);
-        var r = new double[] { 1, 2, 3, 4, 5, 6 };
-        var l = new Matrix(2, r);
-        //x = x* l;
-        Console.WriteLine(x * l);
-
-        var oneDo = new double[] { 1, 0, 2, 1, -1, 1 };
-        var one = new Matrix(2, oneDo);
-
-        var tDo = new double[] { 1, 2, 0, 0, -1, 1 };
-        var two = new Matrix(3, tDo);
-
-        Console.WriteLine(one * two);
-
-        var Q = new ExactQuadraticInterpolator(values);
-        Console.WriteLine(two.ToArray());
     }
 }
 

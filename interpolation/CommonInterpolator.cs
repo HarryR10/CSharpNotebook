@@ -1,7 +1,9 @@
-﻿internal class CommonInterpolator    // класс будет виден в любом месте содержащей его сборки
+internal class CommonInterpolator    // класс будет виден в любом месте содержащей его сборки
                                      // "поскольку класс Program находится с ним в одном пространстве имен - нас это устраивает"
 {
     private double[] _values;
+
+    internal const double Eps = 0.000000000001;
 
     public CommonInterpolator(double[] values)
     {
@@ -30,5 +32,25 @@
     protected double[] Values
     {
         get { return _values; }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+    internal void GetXY(double[] values, double[] xArray, double[] yArray)
+    {
+        int[] miniCounter = { 0, 0 };
+
+        for (int i = 0; i < values.Length; i++)
+        {
+            int sort = i % 2;
+            if (sort == 0)
+            {
+                xArray[miniCounter[sort]] = values[i];
+            }
+            else
+            {
+                yArray[miniCounter[sort]] = values[i];
+            }
+            miniCounter[sort]++;
+        }
     }
 }

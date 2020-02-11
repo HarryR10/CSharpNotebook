@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using MatrixMath;
 using Polynoms;
@@ -42,22 +42,9 @@ internal class ExactQuadraticInterpolator : CommonInterpolator
 
         double[] xCoordinates = new double[currentValues.Length / 2];
         double[] yCoordinates = new double[currentValues.Length / 2];
-        int[] miniCounter = { 0, 0 };
 
-        for (int i = 0; i < currentValues.Length; i++)
-        {
-            int sort = i % 2;
-            if(sort == 0)
-            {
-                xCoordinates[miniCounter[sort]] = currentValues[i];
-            }
-            else
-            {
-                yCoordinates[miniCounter[sort]] = currentValues[i];
-            }
-            miniCounter[sort]++;
+        GetXY(currentValues, xCoordinates, yCoordinates);
 
-        }
         var xColumn = new Matrix(1, xCoordinates);
         var yColumn = new Matrix(1, yCoordinates);
 

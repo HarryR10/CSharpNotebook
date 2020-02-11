@@ -1,45 +1,36 @@
 ﻿<Properties StartupConfiguration="{278BF18E-3CAE-46D7-A9CB-B9BA89B48E22}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExactQuadraticInterpolator.cs">
     <Files>
-      <File FileName="Program.cs" Line="59" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
       <File FileName="CommonInterpolator.cs" />
       <File FileName="LinearInterpolator.cs" />
-      <File FileName="StepInterpolator.cs" />
-      <File FileName="ExactQuadraticInterpolator.cs" />
-      <File FileName="../QuadEquation/QuadEquation/MainClass.cs" Line="25" Column="38" />
+      <File FileName="StepInterpolator.cs" Line="1" Column="1" />
+      <File FileName="ExactQuadraticInterpolator.cs" Line="1" Column="1" />
+      <File FileName="../QuadEquation/QuadEquation/MainClass.cs" />
+      <File FileName="../MatrixMath/MatrixMath/ExceptionCollection.cs" />
+      <File FileName="../MatrixMath/MatrixMath/MainClass.cs" />
+      <File FileName="NewtonInterpolation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="interpolation" expanded="True">
-            <Node name="interpolation" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="ProjectDependencies" expanded="True" />
-              </Node>
-              <Node name="Program.cs" selected="True" />
-            </Node>
+            <Node name="interpolation" expanded="True" />
             <Node name="MatrixMath" expanded="True" />
             <Node name="Polynoms" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
+              <Node name="MainClass.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Interpolation PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.interpolation PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/interpolation/Program.cs" relfile="Program.cs" line="59" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
