@@ -2,15 +2,17 @@
 {
     public class LineCounter
     {
-        public int Counter { get; set; }
+        private int _counter;
 
-        public LineCounter()
+        public override string ToString()
         {
-            Counter = 0;
+            return "Error in line " + _counter + ": ";
         }
 
-        public void Next() => Counter++;
+        public LineCounter() => _counter = 0;
 
-        public void Reset() => Counter = 0;
+        public void Next() => _counter++;
+
+        public void Reset() => _counter = 0;
     }
 }

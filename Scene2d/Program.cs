@@ -20,8 +20,6 @@ namespace Scene2d
 
             bool readCommandsFromFile = args.Length > 0;
 
-            //почему отладчик заходит в эти методы не в момент присваивания?
-            //читать про generics?
             IEnumerable<string> commands = readCommandsFromFile ?
                 ReadCommandsFromFile(args[0]) :
                 ReadCommandsFromUserInput();
@@ -29,9 +27,10 @@ namespace Scene2d
             bool drawSceneOnEveryCommand = !readCommandsFromFile;
 
             //--см StackTrace...
-
+            LineCounter counter = new LineCounter();
             foreach (string commandLine in commands)
             {
+                counter.Next();
                 try
                 {
                     commandProducer.AppendLine(commandLine);
@@ -49,12 +48,40 @@ namespace Scene2d
                         }
                     }
                 }
-                catch (BadFormatException)
+                catch (BadFormatException error)
                 {
-                    Console.WriteLine("bad format");
+                    Console.WriteLine(counter.ToString() + error);
                 }
-
-                /* todo: more exceptions handling here */
+                catch (BadRectanglePointException error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                    commandProducer.ToNull();
+                }
+                catch (BadCircleRadiusException error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                    commandProducer.ToNull();
+                }
+                //catch (BadPolygonPointException error)
+                //{
+                //    Console.WriteLine(counter.ToString() + error);
+                //}
+                catch (BadPolygonPointNumberException error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                }
+                catch (UnexpectedEndOfPolygonExeption error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                }
+                //catch (BadNameException error)
+                //{
+                //    Console.WriteLine(counter.ToString() + error);
+                //}
+                //catch (NameDoesAlreadyExistException error)
+                //{
+                //    Console.WriteLine(counter.ToString() + error);
+                //}
             }
 
             if (!drawSceneOnEveryCommand)

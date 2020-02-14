@@ -6,6 +6,6 @@ namespace Scene2d.Exceptions
     {
         const string txtMessage = "bad format";
 
-        public BadFormatException(string auxMessage) : base(String.Format("{0}: {1}", auxMessage, txtMessage)) { }
+        public BadFormatException(string auxMessage) : base(String.Format("{0} - command \"{1}\" is undefined", txtMessage, auxMessage)) { }
     }
 }

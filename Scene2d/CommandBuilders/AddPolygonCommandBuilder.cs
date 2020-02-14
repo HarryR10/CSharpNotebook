@@ -44,7 +44,7 @@ namespace Scene2d.CommandBuilders
             // check if line matches the RecognizeRegex
             var matchName = NameRegex.Match(line);
             string[] separators = { " ", "(", ",", ")" };
-
+            //todo: need try/catch
             if (matchName.Success & isBegin)
             {
                 string[] afterSplit = matchName.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
@@ -58,7 +58,7 @@ namespace Scene2d.CommandBuilders
             {
                 if (AllPoints.Count < 3)
                 {
-                    throw new BadPolygonPointNumber("bad polygon point number");
+                    throw new BadPolygonPointNumberException("bad polygon point number");
                 }
                 _polygon = new PolygonFigure(AllPoints.ToArray());
                 

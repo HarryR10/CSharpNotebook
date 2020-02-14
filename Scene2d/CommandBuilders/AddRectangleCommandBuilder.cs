@@ -36,11 +36,16 @@ namespace Scene2d.CommandBuilders
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                 _name = afterSplit[0];
-                _rectangle = new RectangleFigure
-                    (
-                    new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture)),
-                    new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture))
-                    );
+
+                var firstPoint = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
+                var secondPoint = new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture));
+
+                if(firstPoint.X == secondPoint.X | firstPoint.Y == secondPoint.Y)
+                {
+                    throw new BadRectanglePointException(string.Format("({0}, {1}) ({2}, {3})", afterSplit[1], afterSplit[2], afterSplit[3], afterSplit[4]));
+                }
+
+                _rectangle = new RectangleFigure(firstPoint, secondPoint);
             }
             else
             {

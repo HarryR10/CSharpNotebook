@@ -12,20 +12,22 @@ namespace Scene2d.CommandBuilders
         private static readonly Dictionary<Regex, Func<ICommandBuilder>> Commands =
             new Dictionary<Regex, Func<ICommandBuilder>>
             {
-                // как работает этот словарь?
-                // () => new AddRectangleCommandBuilder() - объявление функции и тут же ее
-                // добавление в словарь?
                 { new Regex("^add rectangle .*"), () => new AddRectangleCommandBuilder() },
                 { new Regex("^add circle .*"), () => new AddСircleCommandBuilder() },
                 { new Regex("^add polygon .*"), () => new AddPolygonCommandBuilder() },
-                { new Regex("^add point .*"), () => new AddPolygonCommandBuilder() },
-                { new Regex("^end polygon"), () => new AddPolygonCommandBuilder() },
+                //{ new Regex("^add point .*"), () => new AddPolygonCommandBuilder() },
+                //{ new Regex("^end polygon"), () => new AddPolygonCommandBuilder() },
                 { new Regex("^move .*"), () => new MoveFigureCommandBuilder() },
-                { new Regex("^delete .*"), () => new DeleteFigureCommandBuilder() }
-                // todo: Should add new Regex for #comments
+                { new Regex("^delete .*"), () => new DeleteFigureCommandBuilder() },
+                //{ new Regex("^#.*"), () => new AddCommentCommandBuilder() }
             };
 
         private ICommandBuilder _currentBuilder;
+
+        internal void ToNull()
+        {
+            _currentBuilder = null;
+        }
 
         public bool IsCommandReady
         {
@@ -50,6 +52,7 @@ namespace Scene2d.CommandBuilders
                     {
                         //проверяем совпадение строки на каждый
                         //элемент справочника
+
                         _currentBuilder = pair.Value();
                         break;
                     }
@@ -57,10 +60,37 @@ namespace Scene2d.CommandBuilders
 
                 if (_currentBuilder == null)
                 {
-                    throw new BadFormatException("error in line");
+                    throw new BadFormatException(line);
                 }
             }
+            else if (new Regex("^#.*").IsMatch(line))
+            {
+                return; //это комментарий
+            }
+            else if (_currentBuilder.GetType() == typeof(AddPolygonCommandBuilder) &
+                !(new Regex(@"^(\s*)(add point .*|end polygon)").IsMatch(line)))
+            {
+                throw new UnexpectedEndOfPolygonExeption("please, add more points, or finish \"add polygon\"-command");
+            }
+
+
             _currentBuilder.AppendLine(line);
+            //----вариант, если мы считаем добавление комментария командой------
+            {
+                //прежде нужно раскомментировать { new Regex("^#.*"), () => new AddCommentCommandBuilder() выше
+                //также можно выделить в интерфейсе доп. поле bool isMultiStringCommand и проверять уже его, а не тип
+
+                //else if (_currentBuilder.GetType() == typeof(AddPolygonCommandBuilder) & new Regex("^#.*").IsMatch(line))
+                //{
+                //    var rgx = new Regex("^#.*");
+                //    Commands.TryGetValue(rgx, out var subBuilder); // почему уходит в null?
+                //    _currentBuilder = subBuilder.Invoke();
+
+                //    //после этого многострочная команда прерывается однострочной(которая выполняется!),
+                //    //но нам придется вызвать ошибку
+                //    throw new UnexpectedEndOfPolygonExeption("error in line");
+                //}
+            }
         }
 
         //этот метод возвращает объект с типом интерфейса

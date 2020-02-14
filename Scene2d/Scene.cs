@@ -49,6 +49,7 @@ namespace Scene2d
         public void CreateCompositeFigure(string name, IEnumerable<string> childFigures)
         {
             /* Should create a group figure. */
+            /* todo: check if the name is unique and throw if it's not */
         }
 
         public SceneRectangle CalculateCircumscribingRectangle(string name)
@@ -121,17 +122,17 @@ namespace Scene2d
 
         public void Delete(string name)
         {
-            //if (_figures.TryGetValue(name, out IFigure finded))
-            //{
-            //    finded.Move(vector);
-            //    return;
-            //}
+            if (_figures.TryGetValue(name, out IFigure finded))
+            {
+                _figures.Remove(name);
+                return;
+            }
 
-            //if (_compositeFigures.TryGetValue(name, out ICompositeFigure findedComposite))
-            //{
-            //    findedComposite.Move(vector);
-            //    return;
-            //}
+            if (_compositeFigures.TryGetValue(name, out ICompositeFigure findedComposite))
+            {
+                _compositeFigures.Remove(name);
+                return;
+            }
 
             /* todo: Should implementate some exceptions
         }

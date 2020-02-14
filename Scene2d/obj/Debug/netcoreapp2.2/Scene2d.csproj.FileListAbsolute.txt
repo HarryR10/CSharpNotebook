@@ -15,8 +15,8 @@
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/bin/Debug/netcoreapp2.2/Scene2d.runtimeconfig.dev.json
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/bin/Debug/netcoreapp2.2/Scene2d.dll
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/bin/Debug/netcoreapp2.2/Scene2d.pdb
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.csprojAssemblyReference.cache
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.AssemblyInfoInputs.cache
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.AssemblyInfo.cs
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.dll
 /Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-4/Scene2d/obj/Debug/netcoreapp2.2/Scene2d.csprojAssemblyReference.cache

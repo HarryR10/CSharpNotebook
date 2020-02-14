@@ -35,12 +35,16 @@ namespace Scene2d.CommandBuilders
             {
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
                 _name = afterSplit[0];
-                _circle = new CircleFigure
-                    (
-                    new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture)),
-                    double.Parse(afterSplit[4], CultureInfo.InvariantCulture)
-                    );
+                double radius = double.Parse(afterSplit[4], CultureInfo.InvariantCulture);
+                ScenePoint center = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
+
+                if (Math.Abs(radius) < 0.0000000001 | radius < 0)
+                {
+                    throw new BadCircleRadiusException(radius.ToString());
+                }
+                _circle = new CircleFigure(center, radius);
             }
             else
             {
