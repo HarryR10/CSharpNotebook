@@ -3,17 +3,19 @@ using Scene2d.Exceptions;
 
 namespace Scene2d.CommandBuilders
 {
-    using System.Globalization;
+
     using System.Text.RegularExpressions;
     using Scene2d.Commands;
-    using Scene2d.Figures;
 
-    public class DeleteFigureCommandBuilder : ICommandBuilder
+    public class ReflectCommandBuilder : ICommandBuilder
     {
-        //было без delete
-        private static readonly Regex RecognizeRegex = new Regex(@"delete\s+((\w*\-*)+)");
+
+        private static readonly Regex RecognizeRegex = new Regex(
+            @"reflect\s+(vertically|horizontally)\s+((\w*\-*)+)");
 
         private string _name;
+
+        private ReflectOrientation _reflectOrientation;
 
         private bool _isScene = false;
 
@@ -27,21 +29,30 @@ namespace Scene2d.CommandBuilders
 
         public void AppendLine(string line)
         {
-            // check if line matches the RecognizeRegex
             var match = RecognizeRegex.Match(line);
 
             if (match.Success)
             {
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                // было 0
-                if (afterSplit[1] == "scene")
+
+                if(afterSplit[1] == "vertically")
+                {
+                    _reflectOrientation = ReflectOrientation.Vertical;
+                }
+                else if(afterSplit[1] == "horizontally")
+                {
+                    _reflectOrientation = ReflectOrientation.Horizontal;
+                }
+
+
+                if (afterSplit[2] == "scene")
                 {
                     _isScene = true;
                 }
                 else
                 {
-                    _name = afterSplit[1];
+                    _name = afterSplit[2];
                 }
             }
             else
@@ -54,9 +65,10 @@ namespace Scene2d.CommandBuilders
         {
             if (_isScene)
             {
-                return new DeleteSceneCommand();
+                // todo: make it
+                //return new ReflectSceneCommand(_reflectOrientation);
             }
-            return new DeleteCommand(_name);
+            return new ReflectCommand(_name, _reflectOrientation);
         }
     }
 }

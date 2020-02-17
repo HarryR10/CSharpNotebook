@@ -4,6 +4,7 @@ namespace Scene2d
     using System.Collections.Generic;
     using System.Linq;
     using Scene2d.Figures;
+    using Scene2d.Exceptions;
 
     //отладчик заходит в private readonly поля
     //в статические не заходит - они не являются полями конкретного экземпляра
@@ -18,7 +19,13 @@ namespace Scene2d
 
         public void AddFigure(string name, IFigure figure)
         {
-            /* todo: check if the name is unique and throw if it's not */
+            foreach(var el in _figures)
+            {
+                if(el.Key == name)
+                {
+                    throw new NameAlreadyUsedException(name);
+                }
+            }
 
             _figures[name] = figure;
         }
@@ -48,20 +55,25 @@ namespace Scene2d
 
         public void CreateCompositeFigure(string name, IEnumerable<string> childFigures)
         {
-            /* Should create a group figure. */
-            /* todo: check if the name is unique and throw if it's not */
+            foreach (var el in _compositeFigures)
+            {
+                if (el.Key == name)
+                {
+                    throw new NameAlreadyUsedException(name);
+                }
+            }
+            /* todo: implement this */
         }
 
         public SceneRectangle CalculateCircumscribingRectangle(string name)
         {
-            /* Should calculate the rectangle that wraps figure or group 'name' */
-
+            // todo: CalculateCircumscribingRectangle()
             throw new NotImplementedException();
         }
 
         public void MoveScene(ScenePoint vector)
         {
-            /* Should move all the figures and groups in the scene by 'vector' */
+            // todo: MoveScene() 
         }
 
         public void Move(string name, ScenePoint vector)
@@ -77,18 +89,28 @@ namespace Scene2d
                 findedComposite.Move(vector);
                 return;
             }
-
-            /* todo: Should implementate some exceptions
+            throw new BadNameException(name);
         }
 
         public void RotateScene(double angle)
         {
-            /* Should rotate all figures and groups in the scene by 'angle' */
+            // todo: RotateScene() 
         }
 
         public void Rotate(string name, double angle)
         {
-            /* Should rotate figure or group 'name' by 'angle' */
+            if (_figures.TryGetValue(name, out IFigure finded))
+            {
+                finded.Rotate(angle);
+                return;
+            }
+
+            if (_compositeFigures.TryGetValue(name, out ICompositeFigure findedComposite))
+            {
+                findedComposite.Rotate(angle);
+                return;
+            }
+            throw new BadNameException(name);
         }
 
         public IEnumerable<IFigure> ListDrawableFigures()
@@ -103,21 +125,31 @@ namespace Scene2d
 
         public void CopyScene(string copyName)
         {
-            /* Should copy the entire scene to a group named 'copyName' */
-
-            throw new NotImplementedException();
+            //todo: CopyScene
         }
 
         public void Copy(string originalName, string copyName)
         {
-            /* Should copy figure or group 'originalName' to 'copyName' */
+            if (_figures.TryGetValue(originalName, out IFigure finded))
+            {
+                var copy = finded.Clone();
+                AddFigure(copyName, (IFigure)copy);
+                return;
+            }
 
-            throw new NotImplementedException();
+            if (_compositeFigures.TryGetValue(originalName, out ICompositeFigure findedComposite))
+            {
+                //todo: test it
+                var copy = findedComposite.Clone();
+                CreateCompositeFigure(copyName, (IEnumerable<string>)copy);
+                return;
+            }
+            throw new BadNameException(originalName);
         }
 
         public void DeleteScene()
         {
-            //
+            //todo: DeleteScene
         }
 
         public void Delete(string name)
@@ -133,18 +165,45 @@ namespace Scene2d
                 _compositeFigures.Remove(name);
                 return;
             }
-
-            /* todo: Should implementate some exceptions
+            throw new BadNameException(name);
         }
 
         public void ReflectScene(ReflectOrientation reflectOrientation)
         {
-            /* Should reflect all the figures and groups in the scene */
+            // todo: ReflectScene()
         }
 
         public void Reflect(string name, ReflectOrientation reflectOrientation)
         {
-            /* Should reflect figure or group 'name' */
+            if (_figures.TryGetValue(name, out IFigure finded))
+            {
+                finded.Reflect(reflectOrientation);
+                return;
+            }
+
+            if (_compositeFigures.TryGetValue(name, out ICompositeFigure findedComposite))
+            {
+                findedComposite.Reflect(reflectOrientation);
+                return;
+            }
+            throw new BadNameException(name);
+        }
+
+        public string PrintCircumscribingRectangle(string name)
+        {
+            if (_figures.TryGetValue(name, out IFigure finded))
+            {
+                return finded.CalculateCircumscribingRectangle().Vertex1.ToString() + " " +
+                    finded.CalculateCircumscribingRectangle().Vertex2.ToString();
+            }
+
+            if (_compositeFigures.TryGetValue(name, out ICompositeFigure findedComposite))
+            {
+                return findedComposite.CalculateCircumscribingRectangle().Vertex1.ToString() + " " +
+                    findedComposite.CalculateCircumscribingRectangle().Vertex2.ToString();
+            }
+
+            throw new BadNameException(name);
         }
     }
 }

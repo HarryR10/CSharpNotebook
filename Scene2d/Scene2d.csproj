@@ -16,4 +16,7 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MathLibs\" />
+  </ItemGroup>
 </Project>

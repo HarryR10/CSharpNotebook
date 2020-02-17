@@ -6,6 +6,7 @@
     {
         //когда точки не задают прямоугольник
         
-        public BadRectanglePointException(string auxMessage) : base(String.Format("points {0} don't define a rectangle", auxMessage)) { }
+        public BadRectanglePointException(string auxMessage) :
+            base(String.Format("points {0} isn't define a rectangle", auxMessage)) { }
     }
 }

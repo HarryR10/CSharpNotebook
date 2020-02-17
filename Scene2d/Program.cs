@@ -62,10 +62,11 @@ namespace Scene2d
                     Console.WriteLine(counter.ToString() + error);
                     commandProducer.ToNull();
                 }
-                //catch (BadPolygonPointException error)
-                //{
-                //    Console.WriteLine(counter.ToString() + error);
-                //}
+                catch (BadPolygonPointException error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                    commandProducer.ToNull();
+                }
                 catch (BadPolygonPointNumberException error)
                 {
                     Console.WriteLine(counter.ToString() + error);
@@ -74,14 +75,19 @@ namespace Scene2d
                 {
                     Console.WriteLine(counter.ToString() + error);
                 }
-                //catch (BadNameException error)
-                //{
-                //    Console.WriteLine(counter.ToString() + error);
-                //}
+                catch (BadNameException error)
+                {
+                    Console.WriteLine(counter.ToString() + error);
+                }
+                catch (NameAlreadyUsedException error)
+                {
+
+                }
                 //catch (NameDoesAlreadyExistException error)
                 //{
                 //    Console.WriteLine(counter.ToString() + error);
                 //}
+                //todo: NameDoesAlreadyExistException
             }
 
             if (!drawSceneOnEveryCommand)

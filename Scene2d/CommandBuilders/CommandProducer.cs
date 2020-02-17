@@ -15,10 +15,13 @@ namespace Scene2d.CommandBuilders
                 { new Regex("^add rectangle .*"), () => new AddRectangleCommandBuilder() },
                 { new Regex("^add circle .*"), () => new AddСircleCommandBuilder() },
                 { new Regex("^add polygon .*"), () => new AddPolygonCommandBuilder() },
-                //{ new Regex("^add point .*"), () => new AddPolygonCommandBuilder() },
-                //{ new Regex("^end polygon"), () => new AddPolygonCommandBuilder() },
                 { new Regex("^move .*"), () => new MoveFigureCommandBuilder() },
                 { new Regex("^delete .*"), () => new DeleteFigureCommandBuilder() },
+                { new Regex("^rotate .*"), () => new RotateComandBuilder() },
+                { new Regex("^reflect .*"), () => new ReflectCommandBuilder() },
+                { new Regex("^copy .*"), () => new CopyCommandBuilder() },
+                { new Regex("^print circumscribing rectangle for .*"), () =>
+                            new PrintCircumscribingRectangleCommandBuilder() }
                 //{ new Regex("^#.*"), () => new AddCommentCommandBuilder() }
             };
 
@@ -44,6 +47,11 @@ namespace Scene2d.CommandBuilders
 
         public void AppendLine(string line)
         {
+            if (new Regex("^#.*").IsMatch(line))
+            {
+                return; //это комментарий
+            }
+
             if (_currentBuilder == null)
             {
                 foreach (var pair in Commands)
@@ -62,10 +70,6 @@ namespace Scene2d.CommandBuilders
                 {
                     throw new BadFormatException(line);
                 }
-            }
-            else if (new Regex("^#.*").IsMatch(line))
-            {
-                return; //это комментарий
             }
             else if (_currentBuilder.GetType() == typeof(AddPolygonCommandBuilder) &
                 !(new Regex(@"^(\s*)(add point .*|end polygon)").IsMatch(line)))

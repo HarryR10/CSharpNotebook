@@ -1,4 +1,7 @@
-﻿namespace Scene2d.CommandBuilders
+﻿// не используется, но может быть использован, если
+// комментарии считать полноценными командами
+
+namespace Scene2d.CommandBuilders
 {
     using Scene2d.Commands;
 

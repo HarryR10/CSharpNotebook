@@ -16,7 +16,7 @@
 
         public string FriendlyResultMessage
         {
-            get { return "Figure " + _name + " was deleted"; }
+            get { return "Figure(s) " + _name + " was deleted"; }
         }
     }
 }

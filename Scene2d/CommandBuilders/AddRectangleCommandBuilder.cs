@@ -10,46 +10,52 @@ namespace Scene2d.CommandBuilders
 
     public class AddRectangleCommandBuilder : ICommandBuilder
     {
-        private static readonly Regex RecognizeRegex = new Regex(@"(\w*\-*)+\s+(\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)\s?){2}");
-        /* Should be set in AppendLine method */
+        private static readonly Regex RecognizeRegex =
+            new Regex(@"(\w*\-*)+\s+(\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)\s?){2}");
         private IFigure _rectangle;
 
-        /* Should be set in AppendLine method */
         private string _name;
 
         public bool IsCommandReady
         {
             get
             {
-                /* "add rectangle" is a one-line command so it is always ready */
                 return true;
             }
         }
 
         public void AppendLine(string line)
         {
-            // check if line matches the RecognizeRegex
             var match = RecognizeRegex.Match(line);
 
             if (match.Success)
             {
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                _name = afterSplit[0];
 
-                var firstPoint = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
-                var secondPoint = new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture));
+                //try
+                //{
+                    _name = afterSplit[0];
 
-                if(firstPoint.X == secondPoint.X | firstPoint.Y == secondPoint.Y)
-                {
-                    throw new BadRectanglePointException(string.Format("({0}, {1}) ({2}, {3})", afterSplit[1], afterSplit[2], afterSplit[3], afterSplit[4]));
-                }
+                    var firstPoint = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
+                    var secondPoint = new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture));
 
-                _rectangle = new RectangleFigure(firstPoint, secondPoint);
+                    if (firstPoint.X == secondPoint.X | firstPoint.Y == secondPoint.Y)
+                    {
+                        throw new BadRectanglePointException(string.Format("({0}, {1}) ({2}, {3})", afterSplit[1], afterSplit[2], afterSplit[3], afterSplit[4]));
+                    }
+
+                    _rectangle = new RectangleFigure(firstPoint, secondPoint);
+                //}
+                //catch
+                //{
+                //    throw new BadFormatException(line);
+                //}
+  
             }
             else
             {
-                throw new BadFormatException("error in line");
+                throw new BadFormatException(line);
             }
         }
 

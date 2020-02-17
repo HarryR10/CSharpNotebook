@@ -11,44 +11,49 @@ namespace Scene2d.CommandBuilders
     public class AddСircleCommandBuilder : ICommandBuilder
     {
         private static readonly Regex RecognizeRegex = new Regex(@"(\w*\-*)+\s+\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)\s+radius\s+(\d+|\d+\.\d+|\d+\,\d+)");
-        /* Should be set in AppendLine method */
+
         private IFigure _circle;
 
-        /* Should be set in AppendLine method */
         private string _name;
 
         public bool IsCommandReady
         {
             get
             {
-                /* "add rectangle" is a one-line command so it is always ready */
                 return true;
             }
         }
 
         public void AppendLine(string line)
         {
-            // check if line matches the RecognizeRegex
             var match = RecognizeRegex.Match(line);
 
             if (match.Success)
             {
-                string[] separators = { " ", "(", ",", ")" };
-                string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                //try
+                //{
+                    string[] separators = { " ", "(", ",", ")" };
+                    string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                _name = afterSplit[0];
-                double radius = double.Parse(afterSplit[4], CultureInfo.InvariantCulture);
-                ScenePoint center = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
+                    _name = afterSplit[0];
+                    double radius = double.Parse(afterSplit[4], CultureInfo.InvariantCulture);
+                    ScenePoint center = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
 
-                if (Math.Abs(radius) < 0.0000000001 | radius < 0)
-                {
-                    throw new BadCircleRadiusException(radius.ToString());
-                }
-                _circle = new CircleFigure(center, radius);
+                    if (Math.Abs(radius) < 0.0000000001 | radius < 0)
+                    {
+                        throw new BadCircleRadiusException(radius.ToString());
+                    }
+                    _circle = new CircleFigure(center, radius);
+                //}
+                //catch
+                //{
+                //    throw new BadFormatException(line);
+                //}
+                
             }
             else
             {
-                throw new BadFormatException("error in line");
+                throw new BadFormatException(line);
             }
         }
 

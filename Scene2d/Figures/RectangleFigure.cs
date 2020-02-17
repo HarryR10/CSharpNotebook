@@ -2,6 +2,7 @@ namespace Scene2d.Figures
 {
     using System;
     using System.Drawing;
+    using Scene2d.MathLibs;
 
     class RectangleFigure : IFigure
     {
@@ -19,17 +20,24 @@ namespace Scene2d.Figures
             _p4 = new ScenePoint { X = p1.X, Y = p2.Y };
         }
 
+        public RectangleFigure(ScenePoint p1, ScenePoint p2,
+            ScenePoint p3, ScenePoint p4)
+        {
+            _p1 = p1;
+            _p2 = p2;
+            _p3 = p3;
+            _p4 = p4;
+        }
+
         public object Clone()
         {
-            return new RectangleFigure( _p1,  _p3);
+            return new RectangleFigure( _p1,  _p2, _p3, _p4);
         }
 
         public SceneRectangle CalculateCircumscribingRectangle()
         {
-            var result = new SceneRectangle();
-            result.Vertex1 = _p1;
-            result.Vertex2 = _p3;
-            return result;
+            var points = new ScenePoint[] { _p1, _p2, _p3, _p4 };
+            return RectangleMath.CommonCalcCircumscribingRectangle(points);
         }
 
         public void Move(ScenePoint vector)
@@ -51,16 +59,24 @@ namespace Scene2d.Figures
 
         public void Rotate(double angle)
         {
-            /* Should rotate current rectangle. Rotation origin point is the rectangle center.*/
+            var center = RectangleMath.GetCenterPoint(_p1, _p3);
 
-            throw new NotImplementedException();
+            _p1 = RotateMath.PointAfterRotate(center, _p1, angle);
+            _p2 = RotateMath.PointAfterRotate(center, _p2, angle);
+            _p3 = RotateMath.PointAfterRotate(center, _p3, angle);
+            _p4 = RotateMath.PointAfterRotate(center, _p4, angle);
         }
 
         public void Reflect(ReflectOrientation orientation)
         {
-            /* Should reflect the figure. Reflection edge is the rectangle axis of symmetry (horizontal or vertical). */
-
-            throw new NotImplementedException();
+            var center = RectangleMath.GetCenterPoint(_p1, _p3);
+            var currentPoints = new ScenePoint[] { _p1, _p2, _p3, _p4 };
+            //currentPoints =
+            ReflectMath.MakeReflection(currentPoints, center, orientation);
+            _p1 = currentPoints[0];
+            _p2 = currentPoints[1];
+            _p3 = currentPoints[2];
+            _p4 = currentPoints[3];
         }
 
         public void Draw(ScenePoint origin, Graphics drawing)

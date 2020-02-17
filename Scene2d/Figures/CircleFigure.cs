@@ -1,6 +1,5 @@
 namespace Scene2d.Figures
 {
-    using System;
     using System.Drawing;
 
     public class CircleFigure : IFigure

@@ -8,12 +8,14 @@ namespace Scene2d.CommandBuilders
     using Scene2d.Commands;
     using Scene2d.Figures;
 
-    public class DeleteFigureCommandBuilder : ICommandBuilder
+    public class RotateComandBuilder : ICommandBuilder
     {
-        //было без delete
-        private static readonly Regex RecognizeRegex = new Regex(@"delete\s+((\w*\-*)+)");
+
+        private static readonly Regex RecognizeRegex = new Regex(@"rotate\s+((\w*\-*)+)\s+\-?(\d+|\d+\.\d+|\d+\,\d+)");
 
         private string _name;
+
+        private double _angle;
 
         private bool _isScene = false;
 
@@ -34,7 +36,7 @@ namespace Scene2d.CommandBuilders
             {
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                // было 0
+
                 if (afterSplit[1] == "scene")
                 {
                     _isScene = true;
@@ -43,6 +45,8 @@ namespace Scene2d.CommandBuilders
                 {
                     _name = afterSplit[1];
                 }
+
+                _angle = double.Parse(afterSplit[2], CultureInfo.InvariantCulture);
             }
             else
             {
@@ -54,9 +58,9 @@ namespace Scene2d.CommandBuilders
         {
             if (_isScene)
             {
-                return new DeleteSceneCommand();
+                return new RotateSceneCommand();
             }
-            return new DeleteCommand(_name);
+            return new RotateCommand(_name, _angle);
         }
     }
 }
