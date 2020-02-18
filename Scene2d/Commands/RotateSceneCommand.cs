@@ -2,18 +2,25 @@
 {
     public class RotateSceneCommand : ICommand
     {
-        //public DeleteSceneCommand()
-        //{
-        //}
+        private readonly double _angle;
+
+        public RotateSceneCommand(double angle)
+        {
+            _angle = angle;
+        }
 
         public void Apply(Scene scene)
         {
-            scene.DeleteScene();
+            scene.RotateScene(_angle);
         }
 
         public string FriendlyResultMessage
         {
-            get { return "Scene is clear"; }
+            get
+            {
+                return "Scene was rotated at "
+                 + _angle + " degrees";
+            }
         }
     }
 }

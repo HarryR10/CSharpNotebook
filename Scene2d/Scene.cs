@@ -32,10 +32,6 @@ namespace Scene2d
 
         public SceneRectangle CalculateSceneCircumscribingRectangle()
         {
-            /* Should calculate the rectangle that wraps the entire scene. */
-
-            /* Already implemented but feel free to change according to figures storage strategy. */
-
             var allFigures = ListDrawableFigures()
                 .Select(f => f.CalculateCircumscribingRectangle())
                 .SelectMany(a => new[] { a.Vertex1, a.Vertex2 })
@@ -55,25 +51,45 @@ namespace Scene2d
 
         public void CreateCompositeFigure(string name, IEnumerable<string> childFigures)
         {
-            foreach (var el in _compositeFigures)
+            foreach(var el in _compositeFigures)
             {
                 if (el.Key == name)
                 {
                     throw new NameAlreadyUsedException(name);
                 }
             }
-            /* todo: implement this */
+
+            ICompositeFigure value = new CompositeFigure();
+
+            foreach (var el in childFigures)
+            {
+                if(_figures.TryGetValue(el, out IFigure finded))
+                {
+                    value.ChildFigures.Add(finded);
+                }
+                else
+                {
+                    throw new BadNameException(el);
+                }
+
+
+            }
+
+            _compositeFigures.Add(name, value);
         }
 
         public SceneRectangle CalculateCircumscribingRectangle(string name)
         {
-            // todo: CalculateCircumscribingRectangle()
+            // todo: логика поиска точек находится в в классе Scene2d.MathLibs.RectangleMath
             throw new NotImplementedException();
         }
 
         public void MoveScene(ScenePoint vector)
         {
-            // todo: MoveScene() 
+            foreach(var el in _figures)
+            {
+                el.Value.Move(vector);
+            }
         }
 
         public void Move(string name, ScenePoint vector)
@@ -94,7 +110,10 @@ namespace Scene2d
 
         public void RotateScene(double angle)
         {
-            // todo: RotateScene() 
+            foreach (var el in _figures)
+            {
+                el.Value.Rotate(angle);
+            }
         }
 
         public void Rotate(string name, double angle)
@@ -125,7 +144,12 @@ namespace Scene2d
 
         public void CopyScene(string copyName)
         {
-            //todo: CopyScene
+            var childFigures = new List<string>();
+            foreach(var el in _figures)
+            {
+                childFigures.Add(el.Key);
+            }
+            CreateCompositeFigure(copyName, childFigures);
         }
 
         public void Copy(string originalName, string copyName)
@@ -139,9 +163,26 @@ namespace Scene2d
 
             if (_compositeFigures.TryGetValue(originalName, out ICompositeFigure findedComposite))
             {
-                //todo: test it
-                var copy = findedComposite.Clone();
-                CreateCompositeFigure(copyName, (IEnumerable<string>)copy);
+                var copy = (ICompositeFigure)findedComposite.Clone();
+                int counter = 0;
+
+                foreach (var el in copy.ChildFigures)
+                {
+                    bool go = false;
+                    while (!go)
+                    {
+                        try
+                        {
+                            AddFigure(copyName + counter.ToString(), el);
+                            go = true;
+                        }
+                        catch
+                        {
+                            counter++;
+                        }
+                    } 
+                }
+                _compositeFigures.Add(copyName, copy);
                 return;
             }
             throw new BadNameException(originalName);
@@ -149,7 +190,8 @@ namespace Scene2d
 
         public void DeleteScene()
         {
-            //todo: DeleteScene
+            _compositeFigures.Clear();
+            _figures.Clear();
         }
 
         public void Delete(string name)
@@ -170,7 +212,10 @@ namespace Scene2d
 
         public void ReflectScene(ReflectOrientation reflectOrientation)
         {
-            // todo: ReflectScene()
+            foreach (var el in _figures)
+            {
+                el.Value.Reflect(reflectOrientation);
+            }
         }
 
         public void Reflect(string name, ReflectOrientation reflectOrientation)
@@ -204,6 +249,14 @@ namespace Scene2d
             }
 
             throw new BadNameException(name);
+        }
+
+        public string PrintSceneCircumscribingRectangle()
+        {
+
+            return CalculateSceneCircumscribingRectangle().Vertex1.ToString() + " " +
+                CalculateSceneCircumscribingRectangle().Vertex2.ToString();
+
         }
     }
 }

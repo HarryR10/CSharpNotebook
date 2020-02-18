@@ -21,7 +21,8 @@ namespace Scene2d.CommandBuilders
                 { new Regex("^reflect .*"), () => new ReflectCommandBuilder() },
                 { new Regex("^copy .*"), () => new CopyCommandBuilder() },
                 { new Regex("^print circumscribing rectangle for .*"), () =>
-                            new PrintCircumscribingRectangleCommandBuilder() }
+                            new PrintCircumscribingRectangleCommandBuilder() },
+                { new Regex("^group .*"), () => new GroupCommandBuilder() }
                 //{ new Regex("^#.*"), () => new AddCommentCommandBuilder() }
             };
 

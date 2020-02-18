@@ -58,7 +58,7 @@ namespace Scene2d.CommandBuilders
         {
             if (_isScene)
             {
-                return new RotateSceneCommand();
+                return new RotateSceneCommand(_angle);
             }
             return new RotateCommand(_name, _angle);
         }

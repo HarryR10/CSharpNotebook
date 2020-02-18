@@ -3,18 +3,18 @@ using Scene2d.Exceptions;
 
 namespace Scene2d.CommandBuilders
 {
+    using System.Collections.Generic;
     using System.Text.RegularExpressions;
     using Scene2d.Commands;
 
-    public class PrintCircumscribingRectangleCommandBuilder : ICommandBuilder
+    public class GroupCommandBuilder : ICommandBuilder
     {
-
         private static readonly Regex RecognizeRegex = new Regex(
-            @"print circumscribing rectangle for\s+((\w*\-*)+)");
+            @"group\s+(\w*\-*)+(\,\s+(\w*\-*)+)*\s+as\s+(\w*\-*)+");
+
+        private List<string> _childFigures = new List<string>();
 
         private string _name;
-
-        private bool _isScene = false;
 
         public bool IsCommandReady
         {
@@ -33,28 +33,19 @@ namespace Scene2d.CommandBuilders
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                if (afterSplit[4] == "scene")
+                _name = afterSplit[afterSplit.Length - 1];
+                for(int i = 1; i < afterSplit.Length - 2; i++)
                 {
-                    _isScene = true;
+                    _childFigures.Add(afterSplit[i]);
                 }
-                else
-                {
-                    _name = afterSplit[4];
-                }
+
             }
             else
             {
-                throw new BadFormatException("error in line");
+                throw new BadFormatException(line);
             }
         }
 
-        public ICommand GetCommand()
-        {
-            if (_isScene)
-            {
-                return new PrintSceneCircumscribingRectangle();
-            }
-            return new PrintCircumscribingRectangle(_name);
-        }
+        public ICommand GetCommand() => new GroupCommand(_name, _childFigures);
     }
 }

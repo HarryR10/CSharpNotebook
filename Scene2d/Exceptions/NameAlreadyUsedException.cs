@@ -4,7 +4,7 @@
 
     public class NameAlreadyUsedException : Exception
     {
-        //когда в команде изменения используется несуществующее имя
+        //когда в команде изменения используется существующее имя
         const string txtMessage = "Name already is used";
 
         public NameAlreadyUsedException(string auxMessage) :

@@ -1,6 +1,5 @@
 namespace Scene2d.Figures
 {
-    using System;
     using System.Drawing;
     using System.Linq;
     using Scene2d.MathLibs;
@@ -69,7 +68,8 @@ namespace Scene2d.Figures
 
         public object Clone()
         {
-            return new PolygonFigure(_points);
+            var toClone = _points.Clone();
+            return new PolygonFigure((ScenePoint[])toClone);
         }
     }
 }

@@ -57,8 +57,7 @@ namespace Scene2d.CommandBuilders
         {
             if (_isScene)
             {
-                // todo: make this
-                //return new MoveSceneCommand(_vector);
+                return new CopySceneCommand(_copyName);
             }
             return new CopyCommand(_name, _copyName);
         }

@@ -81,13 +81,8 @@ namespace Scene2d
                 }
                 catch (NameAlreadyUsedException error)
                 {
-
+                    Console.WriteLine(counter.ToString() + error);
                 }
-                //catch (NameDoesAlreadyExistException error)
-                //{
-                //    Console.WriteLine(counter.ToString() + error);
-                //}
-                //todo: NameDoesAlreadyExistException
             }
 
             if (!drawSceneOnEveryCommand)

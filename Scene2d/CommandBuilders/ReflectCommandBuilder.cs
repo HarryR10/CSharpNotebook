@@ -65,8 +65,7 @@ namespace Scene2d.CommandBuilders
         {
             if (_isScene)
             {
-                // todo: make it
-                //return new ReflectSceneCommand(_reflectOrientation);
+                return new ReflectSceneCommand(_reflectOrientation);
             }
             return new ReflectCommand(_name, _reflectOrientation);
         }

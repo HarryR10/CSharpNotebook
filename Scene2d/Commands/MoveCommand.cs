@@ -19,7 +19,7 @@
 
         public string FriendlyResultMessage
         {
-            get { return "Figure(s) " + _name + "was moved"; }
+            get { return "Figure(s) " + _name + " was moved"; }
         }
     }
 }
