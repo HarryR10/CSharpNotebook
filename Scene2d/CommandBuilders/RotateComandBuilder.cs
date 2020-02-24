@@ -11,7 +11,7 @@ namespace Scene2d.CommandBuilders
     public class RotateComandBuilder : ICommandBuilder
     {
 
-        private static readonly Regex RecognizeRegex = new Regex(@"rotate\s+((\w*\-*)+)\s+\-?(\d+|\d+\.\d+|\d+\,\d+)");
+        private static readonly Regex RecognizeRegex = new Regex(@"rotate\s+((\w+|\-+)+)\s+\-?((\d+\.\d+)|(\d+))");
 
         private string _name;
 

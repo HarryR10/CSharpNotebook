@@ -173,7 +173,7 @@ namespace Scene2d
                     {
                         try
                         {
-                            AddFigure(copyName + counter.ToString(), el);
+                            AddFigure(copyName + "_" + counter.ToString(), el);
                             go = true;
                         }
                         catch

@@ -11,7 +11,7 @@ namespace Scene2d.CommandBuilders
     public class DeleteFigureCommandBuilder : ICommandBuilder
     {
         //было без delete
-        private static readonly Regex RecognizeRegex = new Regex(@"delete\s+((\w*\-*)+)");
+        private static readonly Regex RecognizeRegex = new Regex(@"delete\s+((\w+|\-+)+)");
 
         private string _name;
 

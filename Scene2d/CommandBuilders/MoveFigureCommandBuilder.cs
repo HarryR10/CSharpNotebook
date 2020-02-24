@@ -10,7 +10,8 @@ namespace Scene2d.CommandBuilders
     public class MoveFigureCommandBuilder : ICommandBuilder
     {
 
-        private static readonly Regex RecognizeRegex = new Regex(@"((\w*\-*)+)\s+\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)");
+        private static readonly Regex RecognizeRegex = new Regex(
+            @"(move\s+(\w+|\-+)+)\s+\(\-?((\d+\.\d+)|(\d+))\,\s?\-?((\d+\.\d+)|(\d+))\)");
 
         private string _name;
 
@@ -36,16 +37,17 @@ namespace Scene2d.CommandBuilders
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                if (afterSplit[0] == "scene")
+                if (afterSplit[1] == "scene")
                 {
                     _isScene = true;
                 }
                 else
                 {
-                    _name = afterSplit[0];
+                    _name = afterSplit[1];
                 }
 
-                _vector = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
+                _vector = new ScenePoint(double.Parse(afterSplit[2], CultureInfo.InvariantCulture),
+                    double.Parse(afterSplit[3], CultureInfo.InvariantCulture));
             }
             else
             {

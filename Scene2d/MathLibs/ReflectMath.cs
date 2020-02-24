@@ -4,7 +4,7 @@ namespace Scene2d.MathLibs
 {
     public class ReflectMath
     {
-        internal static void MakeReflection(ScenePoint[] Points,
+        public static void MakeReflection(ScenePoint[] Points,
             ScenePoint Center, ReflectOrientation Orientation)
         {
             if (Orientation == ReflectOrientation.Vertical)

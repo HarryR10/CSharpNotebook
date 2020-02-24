@@ -9,6 +9,7 @@ namespace Scene2d
     using Scene2d.CommandBuilders;
     using Scene2d.Exceptions;
 
+
     internal class Program
     {
         internal static void Main(string[] args)

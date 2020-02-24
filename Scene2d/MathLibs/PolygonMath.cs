@@ -5,7 +5,7 @@ namespace Scene2d.MathLibs
 {
     public class PolygonMath
     {
-        internal static void CheckIntersection(List<ScenePoint> Points, ScenePoint NewPoint)
+        public static void CheckIntersection(List<ScenePoint> Points, ScenePoint NewPoint)
         {
             var lastElement = Points[Points.Count - 1];
 
@@ -30,8 +30,6 @@ namespace Scene2d.MathLibs
                     throw new BadPolygonPointException("intersection detected");
                 }
             }
-
-            //return true;
         }
     }
 }

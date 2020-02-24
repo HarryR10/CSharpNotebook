@@ -11,8 +11,8 @@ namespace Scene2d.CommandBuilders
     {
 
         private static readonly Regex RecognizeRegex = new Regex(
-            @"copy\s+(\w*\-*)+\s+to\s+(\w*\-*)+");
-
+            @"copy\s+(\w+|\-+)+\s+to\s+(\w+|\-+)+");
+        //(\w+|\-+)+
         private string _name;
 
         private string _copyName;

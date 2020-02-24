@@ -3,7 +3,7 @@ namespace Scene2d.MathLibs
 {
     public class RotateMath
     {
-        internal static ScenePoint PointAfterRotate(ScenePoint Center,
+        public static ScenePoint PointAfterRotate(ScenePoint Center,
             ScenePoint Point, double Angle)
         {
             //X = (x — x0) *cos(alpha) — (y — y0) *sin(alpha) + x0;

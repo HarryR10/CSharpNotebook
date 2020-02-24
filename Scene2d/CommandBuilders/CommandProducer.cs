@@ -8,7 +8,6 @@ namespace Scene2d.CommandBuilders
 
     public class CommandProducer : ICommandBuilder
     {
-        //Func<ICommandBuilder> - это ссылка на функцию?
         private static readonly Dictionary<Regex, Func<ICommandBuilder>> Commands =
             new Dictionary<Regex, Func<ICommandBuilder>>
             {
@@ -28,7 +27,7 @@ namespace Scene2d.CommandBuilders
 
         private ICommandBuilder _currentBuilder;
 
-        internal void ToNull()
+        public void ToNull()
         {
             _currentBuilder = null;
         }

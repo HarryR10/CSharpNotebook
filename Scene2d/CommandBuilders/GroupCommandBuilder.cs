@@ -10,7 +10,7 @@ namespace Scene2d.CommandBuilders
     public class GroupCommandBuilder : ICommandBuilder
     {
         private static readonly Regex RecognizeRegex = new Regex(
-            @"group\s+(\w*\-*)+(\,\s+(\w*\-*)+)*\s+as\s+(\w*\-*)+");
+            @"group\s+(\w+|\-+)+(\,\s+(\w+|\-+)+)*\s+as\s+(\w+|\-+)+");
 
         private List<string> _childFigures = new List<string>();
 

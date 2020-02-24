@@ -10,7 +10,7 @@ namespace Scene2d.CommandBuilders
     {
 
         private static readonly Regex RecognizeRegex = new Regex(
-            @"print circumscribing rectangle for\s+((\w*\-*)+)");
+            @"print circumscribing rectangle for\s+(\w+|\-+)+");
 
         private string _name;
 

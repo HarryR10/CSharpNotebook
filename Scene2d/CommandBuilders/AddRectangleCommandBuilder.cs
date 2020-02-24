@@ -11,7 +11,7 @@ namespace Scene2d.CommandBuilders
     public class AddRectangleCommandBuilder : ICommandBuilder
     {
         private static readonly Regex RecognizeRegex =
-            new Regex(@"(\w*\-*)+\s+(\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)\s?){2}");
+            new Regex(@"^add rectangle\s+(\w+|\-+)+\s+(\(\-?((\d+\.\d+)|(\d+))\,\s?\-?((\d+\.\d+)|(\d+))\)\s?){2}");
         private IFigure _rectangle;
 
         private string _name;
@@ -33,12 +33,11 @@ namespace Scene2d.CommandBuilders
                 string[] separators = { " ", "(", ",", ")" };
                 string[] afterSplit = match.Value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                //try
-                //{
-                    _name = afterSplit[0];
 
-                    var firstPoint = new ScenePoint(double.Parse(afterSplit[1], CultureInfo.InvariantCulture), double.Parse(afterSplit[2], CultureInfo.InvariantCulture));
-                    var secondPoint = new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture));
+                    _name = afterSplit[2];
+
+                    var firstPoint = new ScenePoint(double.Parse(afterSplit[3], CultureInfo.InvariantCulture), double.Parse(afterSplit[4], CultureInfo.InvariantCulture));
+                    var secondPoint = new ScenePoint(double.Parse(afterSplit[5], CultureInfo.InvariantCulture), double.Parse(afterSplit[6], CultureInfo.InvariantCulture));
 
                     if (firstPoint.X == secondPoint.X | firstPoint.Y == secondPoint.Y)
                     {
@@ -46,11 +45,6 @@ namespace Scene2d.CommandBuilders
                     }
 
                     _rectangle = new RectangleFigure(firstPoint, secondPoint);
-                //}
-                //catch
-                //{
-                //    throw new BadFormatException(line);
-                //}
   
             }
             else

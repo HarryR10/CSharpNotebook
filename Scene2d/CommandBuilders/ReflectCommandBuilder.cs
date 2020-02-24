@@ -11,7 +11,7 @@ namespace Scene2d.CommandBuilders
     {
 
         private static readonly Regex RecognizeRegex = new Regex(
-            @"reflect\s+(vertically|horizontally)\s+((\w*\-*)+)");
+            @"reflect\s+(vertically|horizontally)\s+((\w+|\-+)+)");
 
         private string _name;
 

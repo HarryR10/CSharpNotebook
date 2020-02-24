@@ -12,8 +12,9 @@ namespace Scene2d.CommandBuilders
 
     public class AddPolygonCommandBuilder : ICommandBuilder
     {
-        private static readonly Regex NameRegex = new Regex(@"add polygon\s+((\w*\-*)+\s?)");
-        private static readonly Regex RecognizeRegex = new Regex(@"add point\s+\(\-?(\d+|\d+\.\d+|\d+\,\d+)\,\s?\-?(\d+|\d+\.\d+|\d+\,\d+)\)|end polygon");
+        private static readonly Regex NameRegex = new Regex(@"add polygon\s+((\w+|\-+)+\s?)");
+        private static readonly Regex RecognizeRegex = new Regex(
+            @"add point\s+\(\-?((\d+\.\d+)|(\d+))\,\s?\-?((\d+\.\d+)|(\d+))\)|end polygon");
 
         private IFigure _polygon;
 
@@ -41,8 +42,6 @@ namespace Scene2d.CommandBuilders
 
         public void AppendLine(string line)
         {
-            //try
-            //{
                 var matchName = NameRegex.Match(line);
                 string[] separators = { " ", "(", ",", ")" };
 
@@ -100,15 +99,10 @@ namespace Scene2d.CommandBuilders
                     allPoints.Add(currentPoint);
                 }
 
-                if (_name == null & !isBegin)
-                {
-                    throw new BadFormatException(line);
-                }
-            //}
-            //catch
-            //{
-            //    throw new BadFormatException(line);
-            //}
+            if (_name == null & !isBegin | !matchPoint.Success & !matchName.Success)
+            {
+                throw new BadFormatException(line);
+            }
         }
 
         public ICommand GetCommand() => new AddFigureCommand(_name, _polygon);
