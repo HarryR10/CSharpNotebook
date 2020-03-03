@@ -1,0 +1,11 @@
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.csprojAssemblyReference.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.AssemblyInfoInputs.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.AssemblyInfo.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Social.deps.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Social.runtimeconfig.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Social.runtimeconfig.dev.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Social.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Social.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Data/settings.json

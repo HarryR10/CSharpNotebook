@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{AB0E4AB5-36E2-4531-A46A-4A519ED4A886}|Default">
+  <MonoDevelop.Ide.ItemProperties.Calculator PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Calculator/Program.cs">
+    <Files>
+      <File FileName="Calculator/Program.cs" Line="52" Column="49" />
+      <File FileName="Calculator/CalculatorEngine.cs" Line="11" Column="70" />
+      <File FileName="Calculator/EncapsulatedDelegates.cs" Line="33" Column="72" />
+      <File FileName="Calculator/Operation.cs" Line="5" Column="59" />
+      <File FileName="Calculator/Evaluator.cs" Line="20" Column="79" />
+      <File FileName="Calculator/Parser.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Calculator" expanded="True">
+            <Node name="Calculator" expanded="True">
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Calculator.Tests" expanded="True">
+              <Node name="Stubs" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Calculator" expanded="True">
+            <Node name="Calculator.Tests" expanded="True">
+              <Node name="Calculator" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="EvaluatorTest" expanded="True" selected="True" />
+                  <Node name="ParserTest" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator.Tests/ParserTest.cs" relfile="Calculator.Tests/ParserTest.cs" line="13" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

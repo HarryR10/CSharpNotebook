@@ -1,0 +1,10 @@
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/bin/Debug/netcoreapp2.1/Calculator.deps.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/bin/Debug/netcoreapp2.1/Calculator.runtimeconfig.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/bin/Debug/netcoreapp2.1/Calculator.runtimeconfig.dev.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/bin/Debug/netcoreapp2.1/Calculator.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/bin/Debug/netcoreapp2.1/Calculator.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/obj/Debug/netcoreapp2.1/Calculator.AssemblyInfoInputs.cache
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/obj/Debug/netcoreapp2.1/Calculator.AssemblyInfo.cs
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/obj/Debug/netcoreapp2.1/Calculator.dll
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/obj/Debug/netcoreapp2.1/Calculator.pdb
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Calculator/Calculator/obj/Debug/netcoreapp2.1/Calculator.csprojAssemblyReference.cache

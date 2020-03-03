@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{30121505-2373-4F12-AB50-A9632B3FE403}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SocialDataSource.cs">
+    <Files>
+      <File FileName="Program.cs" Line="37" Column="44" />
+      <File FileName="SettingUpdater.cs" />
+      <File FileName="UserContext.cs" />
+      <File FileName="SocialDataSource.cs" Line="60" Column="10" />
+      <File FileName="Data/settings.json" Line="4" Column="13" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Social" expanded="True">
+            <Node name="Social" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Exceptions" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="SocialDataSource.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Social PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
