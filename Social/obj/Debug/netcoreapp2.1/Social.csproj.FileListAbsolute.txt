@@ -9,3 +9,6 @@
 /Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.dll
 /Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/Debug/netcoreapp2.1/Social.pdb
 /Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Data/settings.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Data/friends.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Data/messages.json
+/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/bin/Debug/netcoreapp2.1/Data/users.json

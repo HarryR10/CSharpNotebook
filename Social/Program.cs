@@ -3,8 +3,6 @@ namespace Social
     using System;
     using System.Threading;
 
-    public delegate void Print(string message);
-
     class Program
     {
         static void Main(string[] args)
@@ -17,8 +15,9 @@ namespace Social
             string PathMessages = PathDirectory + @"Data/messages.json";
 
             session.PrintSettingsToConsole();
+            session.DefineDelegate();
 
-            Print print = (msg) => session.DefineDelegate(msg);
+            Print Inform = session.Inform;
 
             Cycle();
 
@@ -43,7 +42,11 @@ namespace Social
 
                 var userContext = socialDataSource.GetUserContext(current);
 
-                //todo: вывод в консоль
+                // todo:
+                ConsoleColor currentBackground = Console.BackgroundColor;
+
+                Inform(userContext.SayHello());
+                Inform(userContext.TotalFriends());
 
                 Cycle();
             }

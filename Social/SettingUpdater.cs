@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Text;
 using Social.Models;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
+using System.Text.Json;
 using System.IO;
 using Social.Exceptions;
 
 namespace Social
 {
+    public delegate void Print(string message);
+
     public class SettingUpdater
     {
+        public Print Inform;
+
         public Settings CurrentSettings { get; }
 
         public SettingUpdater()
@@ -17,11 +22,9 @@ namespace Social
 
             if (File.Exists(path))
             {
-                using (StreamReader file = File.OpenText(path))
-                {
-                    string fromFile = File.ReadAllText(path);
-                    CurrentSettings = JsonConvert.DeserializeObject<Settings>(fromFile);
-                }
+                string fromFile = File.ReadAllText(path);
+                //CurrentSettings = JsonConvert.DeserializeObject<Settings>(fromFile);
+                CurrentSettings = JsonSerializer.Deserialize<Settings>(fromFile);
             }
             else
             {
@@ -65,38 +68,40 @@ namespace Social
             PrintSettingsToConsole();
         }
 
+
+        //где то здесь записать ColorScheme как строку в JSON
         public void ApplySettings()
         {
             //сериализовать и применить
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void SetParameters(string command)
         {
             //распарсить и записать в json
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        public Print DefineDelegate(string message)
+        public void DefineDelegate()//string message)
         {
-            Print result = (msg) => { };
+            //Print result = (msg) => { };
 
             if(CurrentSettings.Output == MessageRecipient.Console)
             {
-                result += Console.WriteLine;
+                Inform += Console.WriteLine;
             }
 
             if (CurrentSettings.Output == MessageRecipient.Log)
             {
-                result += WriteToLog;
+                Inform += WriteToLog;
             }
 
             if (CurrentSettings.Output == MessageRecipient.Email)
             {
-                result += SendEmail;
+                Inform += SendEmail;
             }
 
-            return result;
+            //Inform(message);
         }
 
         private void WriteToLog(string message)
