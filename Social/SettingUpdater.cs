@@ -5,6 +5,7 @@ using Social.Models;
 using System.Text.Json;
 using System.IO;
 using Social.Exceptions;
+using System.Text.Json.Serialization;
 
 namespace Social
 {
@@ -22,9 +23,12 @@ namespace Social
 
             if (File.Exists(path))
             {
+                var options = new JsonSerializerOptions();
+                options.Converters.Add(new JsonStringEnumConverter());
+
                 string fromFile = File.ReadAllText(path);
                 //CurrentSettings = JsonConvert.DeserializeObject<Settings>(fromFile);
-                CurrentSettings = JsonSerializer.Deserialize<Settings>(fromFile);
+                CurrentSettings = JsonSerializer.Deserialize<Settings>(fromFile, options);
             }
             else
             {
@@ -88,7 +92,8 @@ namespace Social
 
             if(CurrentSettings.Output == MessageRecipient.Console)
             {
-                Inform += Console.WriteLine;
+                Inform += Console.Write; //todo: возможно ли этим же делегатом передать еще и
+                                             //правила оформления в консоль? "Красить" в этом классе
             }
 
             if (CurrentSettings.Output == MessageRecipient.Log)

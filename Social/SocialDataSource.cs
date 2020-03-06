@@ -26,15 +26,14 @@ namespace Social
         public UserContext GetUserContext(string userName)
         {
             var userContext = new UserContext();
-            IEnumerable<Friend> crossFriends;
-
+            
             ContextUser(userContext, userName);
             
-            crossFriends = ContextFriends(userContext);
+            ContextFriends(userContext);
 
             ContextFriendsOnline(userContext);
 
-            ContextSubscribers(userContext, crossFriends);
+            ContextSubscribers(userContext);
 
             ContextFriendshipOffers(userContext);
 
@@ -59,7 +58,7 @@ namespace Social
             userContext.User = filteredUser.First();
         }
 
-        private IEnumerable<Friend> ContextFriends(UserContext userContext)
+        private void ContextFriends(UserContext userContext)
         {
             var filteredFriends =
                 from friend in _friends
@@ -71,12 +70,14 @@ namespace Social
             var crossFriends =
                 from friend in _friends
                 where userContext.User.UserId == friend.FromUserId &
-                      (friend.Status == 0 | friend.Status == 1)
+                      (friend.Status == 0 | friend.Status == 1) &
+                      friend.FromUserId != friend.ToUserId
 
                 join cross in _friends
                 on friend.ToUserId equals cross.FromUserId
                 where userContext.User.UserId == cross.ToUserId &
-                      (cross.Status == 0 | cross.Status == 1)
+                      (cross.Status == 0 | cross.Status == 1) &
+                      friend.FromUserId != friend.ToUserId
 
                 select friend;
 
@@ -95,9 +96,10 @@ namespace Social
                     UserId = user.UserId
                 };
 
-            userContext.Friends = friends.ToList();
+            userContext.Friends = friends.Distinct().ToList();
 
-            return crossFriends;
+            // crossFriends понадобиться для определения подписчиков
+            //return crossFriends; //уже нет
         }
 
         private void ContextFriendsOnline(UserContext userContext)
@@ -115,22 +117,30 @@ namespace Social
             userContext.OnlineFriends = friendsOnline.ToList();
         }
 
-        private void ContextSubscribers(UserContext userContext, IEnumerable<Friend> crossFriends)
+        private void ContextSubscribers(UserContext userContext)
         {
-            var notRejected =
+            var sbscrberIDs =
                 from sbscrber in _friends
                 where userContext.User.UserId == sbscrber.ToUserId &
-                      (sbscrber.Status == 0 | sbscrber.Status == 1)
+                      (sbscrber.Status == 0 | sbscrber.Status == 1) &
+                      !userContext.Friends.Select(x => x.UserId).Contains(sbscrber.FromUserId) &
+                      sbscrber.FromUserId != userContext.User.UserId
+
                 select sbscrber.FromUserId;
+            { 
+            //notRejected = notRejected.Distinct();
 
             //нам нужна выборка именно "перекрестных" друзей 
-            var crossFriendList = crossFriends.Select(x =>
-                (x.FromUserId == userContext.User.UserId) ? x.ToUserId : x.FromUserId);
+            //var crossFriendList = crossFriends.Select(x =>
+            //    (x.FromUserId == userContext.User.UserId) ? x.ToUserId : x.FromUserId);
+
+            //crossFriendList = crossFriendList.Distinct();
 
             //var sbscrberIDs = crossFriendList.Concat(notRejected).Distinct()...
-            //
-            var sbscrberIDs = crossFriendList.Concat(notRejected).GroupBy(x => x).
-                              Where(x => x.Count() == 1).Select(x => x.Key);
+            //как вариант поиска повторяющихся конкретное число раз
+            //var sbscrberIDs = crossFriendList.Concat(notRejected).GroupBy(x => x).
+            //                  Where(x => x.Count() == 1).Select(x => x.Key);
+            }
 
             var subscribers =
                 from id in sbscrberIDs
@@ -150,7 +160,8 @@ namespace Social
             var offers =
                 from offer in _friends
                 where userContext.User.UserId == offer.ToUserId &
-                      offer.Status == 0
+                      offer.Status == 0 &
+                      userContext.User.UserId != offer.FromUserId
                 join man in _users on offer.FromUserId equals man.UserId
                 where offer.SendDate >= userContext.User.LastVisit
                 select new UserInformation
@@ -189,7 +200,7 @@ namespace Social
 
         private void GetMessages(string path) => FillList(path, _messages);
 
-        private void FillList<T>(string path, IList<T> list)
+        public static void FillList<T>(string path, IList<T> list)
         {
             if (File.Exists(path))
             {
@@ -207,7 +218,7 @@ namespace Social
                         }
                         catch (OutOfMemoryException)
                         {
-                            //будет ли этот вариант более безопасным, или лучше считать весь текст сразу
+                            //todo: будет ли этот вариант более безопасным, или лучше считать весь текст сразу
                             //или оставить как есть, но не использовать try?
                         }
                     }

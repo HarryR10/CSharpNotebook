@@ -1,0 +1,119 @@
+{
+  "format": 1,
+  "restore": {
+    "/Volumes/Seagate/CSharp/gitlab/Lab-6/JsonGenerator/JsonGenerator.csproj": {}
+  },
+  "projects": {
+    "/Volumes/Seagate/CSharp/gitlab/Lab-6/JsonGenerator/JsonGenerator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Volumes/Seagate/CSharp/gitlab/Lab-6/JsonGenerator/JsonGenerator.csproj",
+        "projectName": "JsonGenerator",
+        "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-6/JsonGenerator/JsonGenerator.csproj",
+        "packagesPath": "/Users/igor/.nuget/packages/",
+        "outputPath": "/Volumes/Seagate/CSharp/gitlab/Lab-6/JsonGenerator/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/igor/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/Social.csproj": {
+                "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/Social.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/Social.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/Social.csproj",
+        "projectName": "Social",
+        "projectPath": "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/Social.csproj",
+        "packagesPath": "/Users/igor/.nuget/packages/",
+        "outputPath": "/Volumes/Seagate/CSharp/gitlab/Lab-6/Social/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/igor/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

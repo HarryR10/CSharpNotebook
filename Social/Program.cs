@@ -10,9 +10,9 @@ namespace Social
             SettingUpdater session = new SettingUpdater();
 
             string PathDirectory = session.CurrentSettings.PathDirectory;
-            string PathUsers = PathDirectory + @"Data/users.json";
-            string PathFriends = PathDirectory + @"Data/friends.json";
-            string PathMessages = PathDirectory + @"Data/messages.json";
+            string PathUsers = PathDirectory + @"/users.json";
+            string PathFriends = PathDirectory + @"/friends.json";
+            string PathMessages = PathDirectory + @"/messages.json";
 
             session.PrintSettingsToConsole();
             session.DefineDelegate();
@@ -42,11 +42,20 @@ namespace Social
 
                 var userContext = socialDataSource.GetUserContext(current);
 
-                // todo:
-                ConsoleColor currentBackground = Console.BackgroundColor;
+                userContext.DefaultColor = Console.BackgroundColor;
+                userContext.ColorSettings = session.CurrentSettings.Scheme;
 
                 Inform(userContext.SayHello());
                 Inform(userContext.TotalFriends());
+                Inform(userContext.FriendsList());
+                Inform(userContext.TotalFriendsOnline());
+                Inform(userContext.FriendsListOnline());
+                Inform(userContext.TotalSubscribers());
+                Inform(userContext.SubscribersList());
+                Inform(userContext.NewFriendRequests());
+                Inform(userContext.FriendRequestsList());
+                Inform(userContext.NewsChapter());
+                Inform(userContext.GetPosts());
 
                 Cycle();
             }

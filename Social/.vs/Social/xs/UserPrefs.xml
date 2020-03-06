@@ -1,41 +1,36 @@
 ﻿<Properties StartupConfiguration="{30121505-2373-4F12-AB50-A9632B3FE403}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserContext.cs">
     <Files>
-      <File FileName="Program.cs" Line="45" Column="25" />
-      <File FileName="SettingUpdater.cs" Line="91" Column="44" />
-      <File FileName="SocialDataSource.cs" Line="132" Column="1" />
       <File FileName="Models/News.cs" Line="13" Column="27" />
-      <File FileName="UserContext.cs" Line="38" Column="40" />
-      <File FileName="Models/Friend.cs" Line="1" Column="1" />
-      <File FileName="Data/settings.json" Line="1" Column="1" />
-      <File FileName="Models/UserInformation.cs" Line="3" Column="19" />
-      <File FileName="Models/User.cs" Line="12" Column="34" NotebookId="1" />
-      <File FileName="Data/friends.json" Line="27" Column="20" NotebookId="1" />
-      <File FileName="Data/users.json" Line="29" Column="21" NotebookId="1" />
+      <File FileName="../JsonGenerator/Program.cs" />
+      <File FileName="../JsonGenerator/DataGenerators.cs" />
+      <File FileName="SocialDataSource.cs" />
+      <File FileName="SettingUpdater.cs" />
+      <File FileName="JsonFileWriter.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="UserContext.cs" Line="128" Column="23" />
+      <File FileName="../JsonGenerator/RandomMechanics.cs" />
+      <File FileName="Data/ForGenerators/messages.json" />
+      <File FileName="Data/users.json" Line="33" Column="5" NotebookId="1" />
       <File FileName="Data/messages.json" NotebookId="1" />
+      <File FileName="Data/friends.json" NotebookId="1" />
+      <File FileName="Data/settings.json" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Social" expanded="True">
+            <Node name="JsonGenerator" expanded="True" />
             <Node name="Social" expanded="True">
               <Node name="Data" expanded="True" />
-              <Node name="Exceptions" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="UserContext.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>JsonSerializer.Deserialize&lt;Settings&gt;(fromFile)</Value>
-          <Value>friends.ToList()</Value>
-          <Value>friendList.Concat(notRejected).GroupBy(x =&gt; x).Where(x =&gt; x.Count() == 1)</Value>
-          <Value>friendList.Concat(notRejected).GroupBy(x =&gt; x)</Value>
-          <Value>DateTime.Now - User.DateOfBirth</Value>
-          <Value>userContext.SayHello()</Value>
-        </State>
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

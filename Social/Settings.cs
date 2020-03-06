@@ -31,6 +31,6 @@ namespace Social.Models
 
         public string EmailAdress { get; set; }
 
-        public ColorScheme Color { get; set; }
+        public ColorScheme Scheme { get; set; }
     }
 }
