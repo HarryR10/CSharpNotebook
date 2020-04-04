@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Autocomplete.Basic.-1986237301.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Autocomplete.Basic" t="IncludeRecursive">
+        <e p="Autocomplete.Basic.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="movies.txt" t="Include" />
+          <e p="stagenames.txt" t="Include" />
+          <e p="words.txt" t="Include" />
+        </e>
+        <e p="HintedControl.cs" t="Include" />
+        <e p="LiveSearch.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net47" t="Include">
+              <e p="Autocomplete.Basic.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="SimilarLine.cs" t="Include" />
+        <e p="StringMetrics.cs" t="Include" />
+      </e>
+      <e p="Autocomplete.Basic.sln" t="IncludeFlat" />
+      <e p="Autocomplete.Basic.Tests" t="IncludeRecursive">
+        <e p="Autocomplete.Basic.Tests.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net47" t="Include">
+              <e p="Autocomplete.Basic.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StringMetricsTests.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

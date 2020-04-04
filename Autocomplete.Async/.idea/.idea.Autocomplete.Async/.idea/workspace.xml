@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c88d8af-09ab-44db-b655-087cd0ab81cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Autocomplete.Async/LiveSearch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Autocomplete.Async/HintedControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/174/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/407BDC87-9D10-4CC3-880A-4F9DEF6C1A0B/15/StdInReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Autocomplete.Async/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/163/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/160/Future.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Autocomplete.Async/StringMetrics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Autocomplete.Async/SimilarLine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/142/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B29DAA0D-8DF3-450D-AA4B-DE0133942F36/D/AnyAll.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/34/String.Comparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/12F/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/407BDC87-9D10-4CC3-880A-4F9DEF6C1A0B/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/167/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/60/Char.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/22A/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/407BDC87-9D10-4CC3-880A-4F9DEF6C1A0B/8/ConsoleKeyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/231CAC4C-D307-4AEA-83F1-76589F64BFB3/147/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Autocomplete.Async/SimilarLine.cs" />
+        <option value="$PROJECT_DIR$/Autocomplete.Async/HintedControl.cs" />
+        <option value="$PROJECT_DIR$/Autocomplete.Async/LiveSearch.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YytUkpZQSHYDysFZhO2zSIuCPf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Autocomplete.Async" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Autocomplete.Async/Autocomplete.Async.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="519" height="466" key="DebuggerActiveHint" timestamp="1584910438858">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="519" height="466" key="DebuggerActiveHint/0.0.1920.1080@0.0.1920.1080" timestamp="1584910438858" />
+    <state width="452" height="466" key="DebuggerActiveHint/0.23.1920.974@0.23.1920.974" timestamp="1584902757090" />
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.bottom" timestamp="1584905555653">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584905555653" />
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.center" timestamp="1584905555652">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584905555652" />
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.left" timestamp="1584905555651">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584905555651" />
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.right" timestamp="1584905555652">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="15" y="425" width="768" height="185" key="GridCell.Tab.-1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584905555652" />
+    <state width="1878" height="245" key="GridCell.Tab.0.bottom" timestamp="1585084113896">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585084113896" />
+    <state width="1878" height="245" key="GridCell.Tab.0.center" timestamp="1585084113895">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="245" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585084113895" />
+    <state width="1878" height="245" key="GridCell.Tab.0.left" timestamp="1585084113894">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="245" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585084113894" />
+    <state width="1878" height="245" key="GridCell.Tab.0.right" timestamp="1585084113895">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="245" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585084113895" />
+    <state width="1878" height="141" key="GridCell.Tab.1.bottom" timestamp="1584915324130">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324130" />
+    <state width="1878" height="141" key="GridCell.Tab.1.center" timestamp="1584915324130">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324130" />
+    <state width="1878" height="141" key="GridCell.Tab.1.left" timestamp="1584915324129">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324129" />
+    <state width="1878" height="141" key="GridCell.Tab.1.right" timestamp="1584915324130">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324130" />
+    <state width="1878" height="141" key="GridCell.Tab.2.bottom" timestamp="1584915324132">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324132" />
+    <state width="1878" height="141" key="GridCell.Tab.2.center" timestamp="1584915324131">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324131" />
+    <state width="1878" height="141" key="GridCell.Tab.2.left" timestamp="1584915324131">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324131" />
+    <state width="1878" height="141" key="GridCell.Tab.2.right" timestamp="1584915324132">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324132" />
+    <state width="1878" height="141" key="GridCell.Tab.3.bottom" timestamp="1584915324134">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324134" />
+    <state width="1878" height="141" key="GridCell.Tab.3.center" timestamp="1584915324133">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324133" />
+    <state width="1878" height="141" key="GridCell.Tab.3.left" timestamp="1584915324132">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324132" />
+    <state width="1878" height="141" key="GridCell.Tab.3.right" timestamp="1584915324133">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="141" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324133" />
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.bottom" timestamp="1584915324136">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324136" />
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.center" timestamp="1584915324135">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324135" />
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.left" timestamp="1584915324134">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324134" />
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.right" timestamp="1584915324135">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="387" width="1878" height="141" key="GridCell.Tab.4.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584915324135" />
+    <state x="633" y="356" key="LayersDialog" timestamp="1584908528510">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="633" y="356" key="LayersDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584908528510" />
+    <state x="661" y="169" key="SettingsEditor" timestamp="1584908644483">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="661" y="169" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584908644483" />
+    <state width="960" height="540" key="XDebugger.FullValuePopup" timestamp="1584902737604">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="960" height="540" key="XDebugger.FullValuePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1584902737604" />
+    <state x="15" y="425" width="768" height="201" key="dock-window-1" timestamp="1584907287216">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="15" y="425" width="768" height="201" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1584907287216" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="FindBestSimilarAsync(control.LastWord).Result" language="C#" custom="RiderImportsList:" />
+        <watch expression="Hint" language="C#" custom="RiderImportsList:" />
+        <watch expression="SubResult" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

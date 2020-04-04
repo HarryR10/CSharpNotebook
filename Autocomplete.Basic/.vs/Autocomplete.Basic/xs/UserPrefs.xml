@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E873DD9E-23CD-46ED-9097-847904331D79}|Default">
+  <MonoDevelop.Ide.ItemProperties.Autocomplete.Basic PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Autocomplete.Basic/LiveSearch.cs">
+    <Files>
+      <File FileName="Autocomplete.Basic/Program.cs" Line="11" Column="27" />
+      <File FileName="Autocomplete.Basic/LiveSearch.cs" Line="30" Column="10" />
+      <File FileName="Autocomplete.Basic/HintedControl.cs" />
+      <File FileName="Autocomplete.Basic/SimilarLine.cs" />
+      <File FileName="Autocomplete.Basic/StringMetrics.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Autocomplete.Basic" expanded="True">
+            <Node name="Autocomplete.Basic" expanded="True">
+              <Node name="LiveSearch.cs" selected="True" />
+            </Node>
+            <Node name="Autocomplete.Basic.Tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
