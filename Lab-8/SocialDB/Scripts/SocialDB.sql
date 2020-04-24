@@ -35,6 +35,7 @@ CREATE TABLE Messages
 
 CREATE TABLE Likes
 (
+	likeId INT IDENTITY (1, 1) PRIMARY KEY, 
 	userId INT NOT NULL REFERENCES Users,
 	messageId INT NOT NULL REFERENCES Messages
 )
