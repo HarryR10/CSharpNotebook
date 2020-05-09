@@ -1,8 +1,0 @@
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/bin/Debug/netcoreapp3.0/MatrixMath.deps.json
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/bin/Debug/netcoreapp3.0/MatrixMath.dll
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/bin/Debug/netcoreapp3.0/MatrixMath.pdb
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/obj/Debug/netcoreapp3.0/MatrixMath.csprojAssemblyReference.cache
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/obj/Debug/netcoreapp3.0/MatrixMath.AssemblyInfoInputs.cache
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/obj/Debug/netcoreapp3.0/MatrixMath.AssemblyInfo.cs
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/obj/Debug/netcoreapp3.0/MatrixMath.dll
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/MatrixMath/MatrixMath/obj/Debug/netcoreapp3.0/MatrixMath.pdb

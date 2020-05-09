@@ -1,8 +1,0 @@
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/bin/Debug/netcoreapp3.0/QuadEquation.deps.json
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/bin/Debug/netcoreapp3.0/QuadEquation.dll
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/bin/Debug/netcoreapp3.0/QuadEquation.pdb
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/obj/Debug/netcoreapp3.0/Polynoms.csprojAssemblyReference.cache
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/obj/Debug/netcoreapp3.0/Polynoms.AssemblyInfoInputs.cache
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/obj/Debug/netcoreapp3.0/Polynoms.AssemblyInfo.cs
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/obj/Debug/netcoreapp3.0/QuadEquation.dll
-/Volumes/Seagate/CSharp/gitlab/Lab-4/Interpolation/interpolation/QuadEquation/QuadEquation/obj/Debug/netcoreapp3.0/QuadEquation.pdb

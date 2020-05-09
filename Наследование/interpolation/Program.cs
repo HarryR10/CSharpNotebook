@@ -15,7 +15,7 @@ public class Program
     {
         double[] values = { 0, 2, 1, 4 };
 
-        object[] interpolators =                // а вот про это нужно прочитать подробнее
+        object[] interpolators =                
         {
             new StepInterpolator(values),
             new LinearInterpolator(values)
@@ -40,16 +40,7 @@ public class Program
     }
 }
 
-// ???
-// Что дает такое преобразование:
-//
-//      (interpolator as CommonInterpolator).CalculateValue(SamplePoint))?
-//      Это связано с тем, что изначально массив был типизирован как object[]?
-//      и как отладчик понимает, что имеет дело например со StepInterpolator,
-//      если происходит приведение к типу родительского класса?
-//
-// error CS1061: "object" не содержит определения для "CalculateValue", и не удалось найти доступный метод расширения "CalculateValue",
-// принимающий тип "object" в качестве первого аргумента (возможно, пропущена директива using или ссылка на сборку).
+
 
 
                                                                                 // Все объекты-потомки в C# могут быть приведены к одному 

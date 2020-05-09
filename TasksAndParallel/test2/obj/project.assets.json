@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Seagate/CSharp/try/test2/test2/TasksAndParallel.csproj",
+      "projectUniqueName": "/Volumes/Seagate/CSharp/CSharpNotebook/TasksAndParallel/test2/TasksAndParallel.csproj",
       "projectName": "TasksAndParallel",
-      "projectPath": "/Volumes/Seagate/CSharp/try/test2/test2/TasksAndParallel.csproj",
+      "projectPath": "/Volumes/Seagate/CSharp/CSharpNotebook/TasksAndParallel/test2/TasksAndParallel.csproj",
       "packagesPath": "/Users/igor/.nuget/packages/",
-      "outputPath": "/Volumes/Seagate/CSharp/try/test2/test2/obj/",
+      "outputPath": "/Volumes/Seagate/CSharp/CSharpNotebook/TasksAndParallel/test2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/igor/.config/NuGet/NuGet.Config"
